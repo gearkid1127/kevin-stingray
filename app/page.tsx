@@ -1,11 +1,16 @@
-import Image from "next/image";
-import { Play } from "lucide-react";
+"use client";
 
-export default function page() {
+import Image from "next/image";
+import { useRef } from "react";
+
+export default function Page() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative flex h-screen items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero.jpg"
@@ -13,42 +18,53 @@ export default function page() {
             fill
             className="object-cover object-top"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black" />
         </div>
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+
+        <div className="relative z-10 px-4 text-center">
+          <h1 className="mb-6 text-5xl font-bold text-white md:text-7xl">
             Kevin Stingray
           </h1>
         </div>
       </section>
+
       {/* Featured Music */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-zinc-900">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+      <section className="bg-linear-to-b from-black to-zinc-900 px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="mb-12 text-center text-4xl font-bold text-white md:text-5xl">
             Latest Release
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="aspect-square rounded-lg overflow-hidden">
+
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="aspect-square overflow-hidden rounded-lg">
               <Image
                 src="/albumcover.png"
                 alt="Album cover"
                 width={600}
                 height={600}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
+
             <div>
-              <h3 className="text-3xl font-bold mb-4 text-white">Swindle</h3>
-              <p className="text-white/80 mb-6 text-lg italic border-l-2 border-white/20 pl-4">
+              <h3 className="mb-4 text-3xl font-bold text-white">Swindle</h3>
+
+              <p className="mb-6 border-l-2 border-white/20 pl-4 text-lg italic text-white/80">
                 &quot;If you&apos;re long boarding down some recently repaved
-                suburban streets in the middle of the night, that would be a good time to
-                put this one on.&quot; <br />— Abraham Lincoln
+                suburban streets in the middle of the night, that would be a
+                good time to put this one on.&quot;
+                <br />— Abraham Lincoln
               </p>
-              <div className="space-y-3">
-                <button className="w-full sm:w-auto bg-white text-black px-8 py-3 rounded-full hover:bg-white/90 transition-colors flex items-center justify-center gap-2">
-                  <Play size={20} fill="currentColor" />
-                  Listen Now
-                </button>
+
+              <div className="mb-6">
+                <audio
+                  ref={audioRef}
+                  controls
+                  className="w-full"
+                >
+                  <source src="/Swindle-final.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
               </div>
             </div>
           </div>
