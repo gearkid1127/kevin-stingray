@@ -70,6 +70,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <div className="h-60 bg-gradient-to-b from-zinc-900 to-black" />
     </div>
   );
 }
