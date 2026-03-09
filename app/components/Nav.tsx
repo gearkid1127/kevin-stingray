@@ -1,18 +1,34 @@
-'use client';
+"use client";
 
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import Link from 'next/link';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { url: 'https://open.spotify.com/artist/3nRPJVbqU6wJzJK6ptX4I4?si=johvKdnMTCKHtDQuQAoOaA', label: 'Spotify' },
-    { url: 'https://soundcloud.com/kevin-stingray-136174536', label: 'SoundCloud' },
-    { url: 'https://www.youtube.com/channel/UClHgvnLXG71pqQlHiFLLFYw', label: 'YouTube' },
-    { url: 'https://www.instagram.com/kevin_stingray/?hl=fr', label: 'Instagram' },
-    { url: 'https://music.apple.com/us/artist/kevin-stingray/1577365689', label: 'Apple Music' },
+    {
+      url: "https://open.spotify.com/artist/3nRPJVbqU6wJzJK6ptX4I4?si=johvKdnMTCKHtDQuQAoOaA",
+      label: "Spotify",
+    },
+    {
+      url: "https://soundcloud.com/kevin-stingray-136174536",
+      label: "SoundCloud",
+    },
+    {
+      url: "https://www.youtube.com/channel/UClHgvnLXG71pqQlHiFLLFYw",
+      label: "YouTube",
+    },
+    {
+      url: "https://www.instagram.com/kevin_stingray/?hl=fr",
+      label: "Instagram",
+    },
+    {
+      url: "https://music.apple.com/us/artist/kevin-stingray/1577365689",
+      label: "Apple Music",
+    },
   ];
 
   return (
@@ -20,6 +36,13 @@ export default function Nav() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-white">
+            <Image
+              src="/logo.png"
+              alt="Kevin Stingray Logo"
+              width={32}
+              height={32}
+              className="inline-block mr-2"
+            />
             Kevin Stingray
           </Link>
 
