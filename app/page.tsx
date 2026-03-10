@@ -14,6 +14,7 @@ export default function Page() {
             fill
             priority
             className="object-cover object-top"
+            data-aos="fade-in"
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black" />
         </div>
@@ -26,7 +27,7 @@ export default function Page() {
       </section>
 
       {/* Featured Music */}
-      <section className="bg-linear-to-b from-black to-zinc-900 px-4 py-20 sm:px-6 lg:px-8">
+      <section className="overflow-x-hidden bg-linear-to-b from-black to-zinc-900 px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2
             className="mb-12 text-center text-4xl font-bold text-white md:text-5xl"
@@ -43,14 +44,14 @@ export default function Page() {
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"
-                data-aos="fade-right"
+                data-aos="fade-up"
               />
             </div>
 
             <div>
-              <h3 className="mb-4 text-3xl font-bold text-white" data-aos="fade-left">Swindle</h3>
+              <h3 className="mb-4 text-3xl font-bold text-white" data-aos="fade-up">Swindle</h3>
 
-              <p className="mb-6 border-l-2 border-white/20 pl-4 text-lg italic text-white/80" data-aos="fade-left">
+              <p className="mb-6 border-l-2 border-white/20 pl-4 text-lg italic text-white/80" data-aos="fade-up">
                 &quot;If you&apos;re long boarding down some recently repaved
                 suburban streets in the middle of the night, that would be a
                 good time to put this one on.&quot;
@@ -58,7 +59,7 @@ export default function Page() {
               </p>
 
               <div className="mb-6">
-                <audio controls className="w-full" data-aos="fade-left">
+                <audio controls className="w-full" data-aos="fade-up">
                   <source src="/Swindle-final.mp3" type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
