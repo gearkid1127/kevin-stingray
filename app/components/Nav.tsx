@@ -180,7 +180,7 @@ export default function Nav() {
               <button
                 type="button"
                 onClick={() => setIsContactOpen(false)}
-                className="shrink-0 border-2 border-white bg-white px-2 py-2 text-black transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_rgba(255,255,255,1)]"
+                className="cursor-pointer shrink-0 text-white/70 transition hover:text-white hover:scale-110"
                 aria-label="Close contact modal"
               >
                 <X size={20} />
@@ -230,7 +230,7 @@ export default function Nav() {
                   <FaInstagram size={24} />
                 </div>
 
-                <p className="text-lg font-black uppercase">DM on Instagram</p>
+                <p className="text-lg font-black uppercase">slide on Instagram</p>
                 <p className="mt-1 text-sm text-black/70">Easy Peezy.</p>
               </a>
             </div>
