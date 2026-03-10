@@ -1,21 +1,18 @@
-"use client";
-
 import Image from "next/image";
-import { useRef } from "react";
+import AOSInit from "./components/AOSInit";
 
 export default function Page() {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  
   return (
     <div>
+      <AOSInit />
       {/* Hero Section */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden">
+      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero.jpg"
             alt="The squad"
             fill
+            priority
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black" />
@@ -31,7 +28,10 @@ export default function Page() {
       {/* Featured Music */}
       <section className="bg-linear-to-b from-black to-zinc-900 px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-12 text-center text-4xl font-bold text-white md:text-5xl">
+          <h2
+            className="mb-12 text-center text-4xl font-bold text-white md:text-5xl"
+            data-aos="fade-up"
+          >
             Latest Release
           </h2>
 
@@ -43,13 +43,14 @@ export default function Page() {
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"
+                data-aos="fade-right"
               />
             </div>
 
             <div>
-              <h3 className="mb-4 text-3xl font-bold text-white">Swindle</h3>
+              <h3 className="mb-4 text-3xl font-bold text-white" data-aos="fade-left">Swindle</h3>
 
-              <p className="mb-6 border-l-2 border-white/20 pl-4 text-lg italic text-white/80">
+              <p className="mb-6 border-l-2 border-white/20 pl-4 text-lg italic text-white/80" data-aos="fade-left">
                 &quot;If you&apos;re long boarding down some recently repaved
                 suburban streets in the middle of the night, that would be a
                 good time to put this one on.&quot;
@@ -57,11 +58,7 @@ export default function Page() {
               </p>
 
               <div className="mb-6">
-                <audio
-                  ref={audioRef}
-                  controls
-                  className="w-full"
-                >
+                <audio controls className="w-full" data-aos="fade-left">
                   <source src="/Swindle-final.mp3" type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>

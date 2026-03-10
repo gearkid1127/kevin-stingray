@@ -76,6 +76,7 @@ export default function Nav() {
           <div className="flex h-16 items-center justify-between">
             <Link
               href="/"
+              scroll={true}
               className="flex items-center text-2xl font-bold text-white"
             >
               <Image
