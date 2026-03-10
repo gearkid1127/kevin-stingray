@@ -14,6 +14,7 @@ export default function Page() {
             fill
             priority
             className="object-cover object-top"
+            data-aos= "fade"
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black" />
         </div>
