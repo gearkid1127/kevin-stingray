@@ -44,7 +44,7 @@ export default function Page() {
                 width={600}
                 height={600}
                 className="h-full w-full object-cover"
-                data-aos="fade-up"
+                data-aos="fade-right"
               />
             </div>
 
@@ -59,7 +59,7 @@ export default function Page() {
               </p>
 
               <div className="mb-6">
-                <audio controls className="w-full" data-aos="fade-up">
+                <audio controls className="w-full" data-aos="fade-left">
                   <source src="/Swindle-final.mp3" type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
